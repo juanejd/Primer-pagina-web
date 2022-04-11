@@ -25,7 +25,8 @@ html {
 body {
     font-size: 14px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, var(--grisClaro), var(--blanco) 100%);
+    background-image: linear-gradient(to top, #034159, #038C3E 100%);
+    
 }
 .contenedor {
     max-width: 120rem;
@@ -36,7 +37,7 @@ body {
     margin: 0 auto 0 auto;  /*margen : arriba,derecha,abajo,izquierda */ 
 }
 .boton { 
-    background-color: var(--secundario) ;
+    background-color: #038C3E;
     color: var(--blanco);
     padding: 1rem 3rem;
     margin-top: 3rem;
@@ -49,6 +50,22 @@ body {
     text-align: center;
     border: none;
 }
+
+.buttoncolor{
+    background-color: #034159;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;      /*Eliminar Linea debajo del enlace */
+    text-transform: uppercase;  /*Mayuscula Sostenida */
+    font-weight:bold;           /*texto negrila */
+    border-radius: .5rem;       /*bordes redondeados en el boton */
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
 @media (min-width: 768px) {
     .boton{
         width: auto;
@@ -60,7 +77,7 @@ body {
 
 .sombra {
 box-shadow: 0px 5px 15px 0px rgba(107,106,107,0.46);
-background-color: var(--blanco);
+background-color: #000;
 padding: 2rem;
 border-radius: 1rem;
 }
@@ -68,10 +85,12 @@ border-radius: 1rem;
 
 /* Tipografias */
 h1 {
-    font-size: 3.8rem;
+    font-size: 2.9rem;
+    color: var(--blanco)
 }
 h2 {
     font-size: 2.8rem;
+    color: var(--blanco);
 }
 h3 { 
     font-size: 1.8rem;
@@ -82,8 +101,38 @@ h1,h2,h3 {
 
 
 /* Titulos */ 
-.titulo span {
+header{
+    background-color: #000;
+}
+
+.effect {
+    margin: auto;
+    display: table;
+}
+
+.titulo span{
     font-size: 1.5rem;
+    color: #038C3E;
+    display: inline-flex;
+    padding-left: 3px;
+}
+
+.titulo{
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 1px solid;
+    width: 18ch;
+
+    animation: typing 2s steps(23), blink .5s infinite step-end alternate;
+    overflow: hidden ;
+}
+
+@keyframes typing{
+    from { width: 0;}
+}
+
+@keyframes blink {
+    50% { border-color: transparent}
 }
 
 /** Utilidades **/
@@ -105,7 +154,7 @@ h1,h2,h3 {
 
 /* Navegacion Principal */
 .nav-bg {
-    background-color: var(--secundario);
+    background-color: #038C3E
 } 
 .navegacion-principal {
     display: flex;          /* Display Flex, sirve para alinear horizontalmente los objetos */
@@ -134,9 +183,9 @@ h1,h2,h3 {
 
 /* Hero */
 .hero {
-    background-image: url(../img/fondo.jpg);
+    background-image: url(../img/fondo2.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     height: 450px;
     position: relative;
     margin-bottom: 2rem;
@@ -186,19 +235,20 @@ h1,h2,h3 {
 }
 
 .servicio h3 { 
-    color: var(--secundario);
+    color: #C42C04;
     font-weight: bold;
 }
 
 .servicio p {
     line-height: 2;
     text-align: center;
+    color: var(--blanco);
 }
 
 .servicio .iconos {
     height: 15rem;
     width: 15rem;
-    background-color: var(--primario);
+    background-color:#038C3E;
     border-radius: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -208,7 +258,7 @@ h1,h2,h3 {
 
 /** Formulario **/
 .formulario {
-    background-color: var(--gris);
+    background-color: #7a7a7a4f;
     width: min(60rem, 100% ); /** Utilizar el valor mas pequeño **/
     margin: 0 auto;           /** Utilizar margin cuando tengamos un elemento y el padre no sea display flex **/
     padding: 2rem;
@@ -224,7 +274,7 @@ h1,h2,h3 {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem;
-    color: var(--primario);
+    color: #C42C04;
 }
 
 @media (min-width: 768px ) {
@@ -274,4 +324,5 @@ h1,h2,h3 {
 /** Footer **/
 .footer{
 text-align: center;
+color: var(--blanco);
 }
